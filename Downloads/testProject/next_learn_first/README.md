@@ -1,56 +1,20 @@
-## Introduction to Next.js
-
-### Why Next.js Over React.js?
-
-- **SSR is enabled along with CSR**  
-  SSR (Server-Side Rendering) is available in Next.js, in addition to CSR (Client-Side Rendering).
-  
-- **CSR requires useState, button, input page (or when an error occurs)**  
-  CSR relies on hooks like `useState`, and components like buttons and input fields. 
-  
-- **"use client" for CSR; otherwise, default is SSR**  
-  Use `"use client"` for Client-Side Rendering. By default, Next.js uses Server-Side Rendering.
-
-- **CDN is not possible in Next.js but is in React**  
-  Content Delivery Networks (CDNs) can be used with React but are not directly supported in Next.js.
-
-- **SEO Optimized product in Next.js: Solves the waterfall problem and enables fast rendering through SSR**  
-  Next.js addresses the waterfall problem by serving direct HTML, CSS, and JS to the end-user, which helps SEO bots understand the page content.
-
-- **Waterfall problem is solved**  
-  In traditional approaches, the browser requests and receives JavaScript files before rendering the content. This can hinder SEO. Next.js provides direct HTML, CSS, and JS to the end-user, improving SEO.
-
-- **Routing is enabled by Next.js**  
-  Next.js includes built-in routing. While React Router is available and provides similar functionality, Next.js routing and SEO optimization are more integrated and efficient.
-
-### Installation Steps and Understanding
-
-- **src directory**  
-  There's no installation requirement for the `src` directory. In Next.js, the `src/app` folder is used. If `src/app` does not exist, only one folder difference is noted. App Router was introduced in Next.js 13, where you create folders inside `page.tsx` and `layout.jsx`. The wonders of file-based routing are handled via the App Router.
-
-- **@ as import alias**  
-  The `@` symbol represents the root of the project for locating the app folder, e.g., `@/app`. 
-
-- **Folder structure and routing**  
-  Every folder created with a name corresponds to a route. Inside each folder, `layout.tsx` or `page.tsx` is required. `page.tsx` contains the React code that renders the route page.
-
-- **global.css and tailwind.css**  
-  `global.css` applies to the entire project, while `tailwind.css` should be tuned as per the project requirements.
-
-- **@/app/page.tsx**  
-  This file contains the render code for the root route.
-
-- **layout.tsx**  
-  Use `layout.tsx` when you need a repeated layout for all routes, such as a banner for routes like `https://domain/auth/signin` or `https://domain/auth/login`. Place the banner code in `layout.tsx` and pass props accordingly.
-
-- **Hidden routes**  
-  When you want a layout but do not want to tweak the route, make the auth folder hidden in the route by naming it with a schema like `(auth) (_folder_name_)` as part of merging routes.
-
-- **next.config.mjs**  
-  This file is the configuration file for Next.js projects and is required for deployment tweaks.
-
-- **.next folder**  
-  This folder is similar to the `.dist` folder in React projects and is where the development build is created.
-
-- **Tailwind config file**  
-  Tweak the Tailwind config file if your folder structure includes Tailwind classes. By default, root pages, app, and components folders are included.
+## introduction to nextJS
+# why next over react.js
+__ SSR is enable along with CSR __
+__ CSR require on useState, button, inputpage.(or when error occur) __
+__ "use client" for CSR else default is SSr __
+__ CDN is not possible in nextJs but in react. __
+__ SEO Optimised product in nextJS : by solveing waterfalling problem and fast rendering through SSR __
+__ Waterfalling problem is solved first broswer as for request and the script.js got and then build by user so SEO bot didn't got what is web page about and what's on page. while in nextJs request call and dirct html css and js given to enduser __
+__ Routing is enabled by next but rect router is lib that also solve the problem in react and also SEO optimizing libraries also there but no one is near to nextJS. __
+# installation steps and understanding.
+__ src directry no installation reastion src/app if yes no /app there just one folder difference only and App Routher is introduce in next13.js where u do create folder inside that page.tsx and layout.jsx all that wonders of filebase routhing is done due to yes in App Router. and then @ as import alias No mean default Yes mean custom (prefferd default and no with src and yes with app roter)  __
+__ @ mean root of project to locate app folder then @/app __
+__ every folder on created with name is going to route and insde that folder with layout or page.tsx is must. page.tsx is react code that render on that route page. __
+__ global.css is going to apply entire project with tailwind.css so tune as per project __
+__ @/app/page.tsx is render code on root route __
+__ layout.tsx is require when repeattion of layout for upcomming allroutes. Like when banner is require for all signin, signout, login and logout like this https://domain/auth/sign.... or https://domain/auth/login... then mention in auth folder and then layout.tsx banner code do mention child by passing props otherwise page.tsx will not work. __
+__ problem when u want layout but not tweek the route then make auth folder hidden in route by name schema like (auth) (_folder_name_) part of mergin routes __
+__ next.config.mjs is config file of next js project require to tweek on deployment. __
+__ .next folder is similar .dist folder in react project where dev build is created. __
+__ tweek the tialwind config file if ur folder has is consider as tailwind classes to apply css genrally root pages, app and components folder are by default__
